@@ -1,0 +1,114 @@
+
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="title">
+            <img class="profile" src="{{profileImage}}">
+            <span class="name">{{name}}</span>
+            <span>{{title}}</span>
+        </div>
+        <span class="address">
+            <div style="text-align: center;">
+                <span> email: <a href="mailto:{{email}}">{{email}}</a></span>
+                <span> phone:<a href="tel:{{phone}}">{{phone}}</a></span>
+            </div>
+            {{#each address}}
+                {{#if @index }}
+                    -
+                {{/if}}
+                <span>{{this}}</span> 
+            {{/each}}
+        </span>
+        <div class="lineBreak"></div>
+        <div>
+            <h2>Career Objective</h2>
+            <p>{{description}}</p>
+        </div>
+        <div class="lineBreak"></div>
+        <div>
+            <h2>Skills</h2>
+            <ul>
+                {{#each skills}}
+                    <li>
+                    <b>{{@key}}:</b>
+                        {{#each this}}
+                            {{#if @index }}
+                                ,
+                            {{/if}}
+                            {{this}}
+                        {{/each}}
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="lineBreak"></div>
+        <div>
+            <h2>Work Experience</h2>
+            {{#each workExperience}}
+                <div class="no-page-break">
+                    <h3><span style="font-size: 22px;">{{this.designation}}</span> <span style="font-size: smaller;font-style:italic">({{this.fromDate}} - {{this.toDate}})</span></h3>
+                    <p style="font-weight: bold;font-size: 20px;">{{this.organization}}</p>
+                    <p>{{this.description}}</p>
+                    <ul>
+                        {{#each this.points}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            {{/each}}
+        </div>
+        <div class="lineBreak"></div>
+         <div>
+            <h2>Education</h2>
+            {{#each education}}
+                <div class="no-page-break">
+                    <h3><span style="font-size: 22px;">{{this.organizatoin}}</span> <span style="font-size: smaller;font-style:italic">({{this.fromDate}} - {{this.toDate}})</span></h3>
+                    <p style="font-weight: bold;font-size: 20px;">{{this.course}}</p>
+                    <p>{{this.info}}</p>
+                </div>
+            {{/each}}
+        </div>
+        <div class="lineBreak"></div>
+    </body>
+</html>
+<style>
+    .no-page-break {
+        page-break-inside: avoid;
+    }
+    body{
+        font-family: 'Roboto', sans-serif;
+        margin: 25px;
+    }
+    .name{
+        font-size: 40px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .profile{
+        width: 150;
+        border-radius: 50%;
+        box-shadow: 0 0 25px -5px;
+        display: block;
+        margin: 15 auto;
+    }
+    .title{
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .title span {
+        display: block;
+    }
+    .address {
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        font-size: 14px;
+        padding: 15px;
+    }
+    .lineBreak{
+        border-bottom: 1px solid darkgray;
+    }
+</style>

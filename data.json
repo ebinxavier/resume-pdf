@@ -1,0 +1,76 @@
+{ 
+    "name": "EBIN XAVIER",
+    "profileImage":"https://avatars1.githubusercontent.com/u/19774216?s=460&u=528505a08c85cf1c187a9ee15219b6d05d97b409&v=4",
+    "title": "Software Engineer",
+    "address": ["Chakkalakkal House", "Kundannoor","Kochi"],
+    "phone":"+971-567809129",
+    "email":"ebinx7@gmail.com",
+    "description":"Looking for a position where I can integrate strategies to develop and expand existing customer sales, brand and product evolution, and media endorsement. To obtain a position that will enable me to use my strong organizational skills, award-winning educational background, and ability to work well with people. To obtain a position that will enable me to use my strong organizational skills, award-winning educational background, and ability to work well with people.",
+    "skills":{
+        "Technologies":["HTML","CSS","Bootstrap","Angular","React.js","Vue.js","Node.js","Next.js","GraphQl","Three.js"],
+        "Database":["MongoDB"],
+        "Softwares":["Git","Docker","VS-Code"],
+        "Languages":["Javascript","Python","C/C++"]
+    },
+    "workExperience":[
+       { 
+           "designation":"Programmer Analyst",
+           "fromDate":"March 2016",
+           "toDate":"April 2018",
+           "organization":"Cognizant Technology Solutions",
+           "description":"Started my career from here. I was a Programmer Anylist in Cognizant. I got a chance to know about varioius web related technologies from this organization. Familiarized different Javascript frameworks like Angular and React.",
+           "points":[
+                "Learned Angular, React", 
+                "Familiarized Javascript, HTML and CSS", 
+                "Exprienced client interation from numbner of projects"
+            ]
+        },
+        { 
+            "designation":"Software Engineer",
+            "fromDate":"May 2018",
+            "toDate":"April 2019",
+            "organization":"Qburst",
+            "description":"Another Story. I was an Engineer in Qburst. I got a chance to know about varioius web related technologies from this organization. Familiarized different Javascript frameworks like Angular and React.",
+            "points":[
+                "Learned Node.js", 
+                "Familiarized Selenium", 
+                "Exprienced client interation from numbner of projects"
+             ]
+        },
+        { 
+            "designation":"Senior Software Engineer",
+            "fromDate":"April 2019",
+            "toDate":"Present",
+            "organization":"Datalkz Software House LLC.",
+            "description":"Moved to Dubai. I am a Senior Engineer in Datalkz. I got a chance to know about varioius web related technologies from this organization. Familiarized different Javascript frameworks like Angular and React.",
+            "points":[
+                "Learned Next.js, Three.js", 
+                "Familiarized GraphQl", 
+                "Exprienced client interation from numbner of projects"
+             ]
+        }
+    ],
+    "education":[
+        {
+            "course":"B.Tech, Computer Science",
+            "organizatoin":"College of Engineering Cherthala",
+            "fromDate":"Aug 2011",
+            "toDate":"April 2015",
+            "info":"First Class"
+        },
+        {
+            "course":"HSE, Computer Science",
+            "organizatoin":"Sacred Heart HSE",
+            "fromDate":"June 2009",
+            "toDate":"April 2011",
+            "info":"86 %"
+        },
+        {
+            "course":"SSLC",
+            "organizatoin":"Sacred Heart HSE",
+            "fromDate":"June 2008",
+            "toDate":"April 2009",
+            "info":"Distinction"
+        }
+    ]
+}
