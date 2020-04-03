@@ -15,6 +15,7 @@ const express = require('express'),
 
 const app = express();
 const router = express.Router();
+app.use(express.static('client'))
 
 router.route('/pdf').get(async function(req, res) {
     const source = fs.readFileSync('./templates/simple.hbs', "utf8");

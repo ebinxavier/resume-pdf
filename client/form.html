@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Resume Builder</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Denk+One:400" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/heroic-features.css" rel="stylesheet">
+  <link href="vendor/tagsinput/tagsinput.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Resume Builder</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+
+
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-sm-2 col-4" id="myScrollspy">
+      <ul class="nav nav-pills flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#section1">Personal Info</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section2">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section3">Work Experience</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section4">Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#section5">Interests</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="col-sm-10 col-8 sections">
+      <form>
+      <div id="section1">    
+        <h1>Personal Info</h1>
+          <div class="row">
+            <div class="form-group col-sm-5">
+              <label for="name">Name</label>
+              <input id="name" class="form-control" type="text" placeholder="Enter your Name">
+            </div>    
+            <div class="form-group col-sm-5">
+              <label for="title">Title</label>
+              <input id="title" class="form-control" type="text" placeholder="Enter your Title / Designation">
+            </div>
+            <div class="form-group col-sm-5">
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group col-sm-5">
+              <label for="mobile">Mobile</label>
+              <input id="mobile" class="form-control" type="text" placeholder="Enter your Mobile Number">
+              <small id="mobileHelp" class="form-text text-muted">We'll never share your mobile number with anyone else.</small>
+            </div>
+            <div class="form-group col-sm-12">
+              <label for="profileImage">Profile Image</label>
+              <div class="col-sm-2 imgUp">
+                <div class="imagePreview"></div>
+                <label class="btn btn-primary" style="width: 148px;">
+                 Upload
+                 <input type="file" id="profileImage" class="uploadFile img" value="Upload Photo" style="width: 0px;height: 0px;overflow: hidden;">
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group col-sm-5">
+              <label for="address1">Address Line 1</label>
+              <input id="address1" class="form-control" type="text" placeholder="Enter your Address 1">
+            </div>
+            <div class="form-group col-sm-5">
+              <label for="address2">Address Line 2</label>
+              <input id="address2" class="form-control" type="text" placeholder="Enter your Address 2">
+            </div>
+            <div class="form-group col-sm-5">
+              <label for="address2">City</label>
+              <input id="address2" class="form-control" type="text" placeholder="Enter your City">
+            </div>
+
+            <div class="form-group col-sm-12">
+              <label for="description">Career Objectives</label>
+              <textarea class="form-control" id="description" rows="3"></textarea>
+            </div>
+
+
+          </div>
+      </div>
+      <div id="section2"> 
+        <h1>Skills</h1>
+        <div id="skill-collection">
+          <div class="card form-group">
+            <div class="card-body">
+              <div class="form-group col-sm-3">
+                <label for="skill-category0">Skill Category</label>
+                <input id="skill-category0" value="Languages" class="form-control" type="text" placeholder="Enter the skill category">
+              </div>
+              <div class="form-group col-sm-12">
+                <label for="skill-tags0">Skills</label>
+                <input id="skill-tags0" type="text" data-role="tagsinput" value="English, German, French" placeholder="Add skills">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button onclick="addSkillSection()" type="button" class="btn btn-primary">Add More Skills</button>
+        
+      </div>        
+      <div id="section3">         
+        <h1>Work Experience</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+      <div id="section4">         
+        <h1>Education</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>      
+      <div id="section5">         
+        <h1>Interests</h1>
+        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+      </div>
+    </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; www.epidemist.com 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/tagsinput/tagsinput.js"></script>
+  <script src="vendor/script.js"></script>
+
+</body>
+
+</html>
+
+<style>
+  body {
+    position: relative;
+  }
+  ul.nav-pills {
+    top: 65px;
+    position: fixed;
+  }
+  .sections > form > div{
+    padding-top: 55px;
+  }
+  #section1 .row, #section2 .row, #section3 .row, #section3 .row, #section5 .row {
+    margin: 20px;
+  }
+  .sections{
+    padding: 0 15px;
+    background: #383838;
+  }
+  .nav-item a {
+    color: lavender;
+  }
+
+  .badge-info{
+    margin: 0 5px !important;
+    background-color: #343a40;
+  }
+  .card {
+  background-color: #383838;  
+  }
+  .closeBtn{
+    width: 33px;
+    right: 0;
+    position: absolute;
+    margin: 5px;
+    padding: 0 3px 3px 3px;
+  }
+
+
+
+  /* Image Upload styles */
+  .imagePreview {
+    width: 147px;
+    height: 150px;
+    background-position: center center;
+    background:url(http://cliquecities.com/assets/no-image-e3699ae23f866f6cbdf8ba2443ee5c4e.jpg);
+    background-color: #383838;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: center;
+    background-repeat:no-repeat;
+    display: inline-block;
+    box-shadow:0px -3px 6px 2px rgba(0,0,0,0.2);
+}
+.btn-primary
+{
+  display:block;
+  border-radius:0px;
+  box-shadow:0px 4px 6px 2px rgba(0,0,0,0.2);
+  margin-top:-5px;
+}
+.imgUp
+{
+  margin-bottom:15px;
+}
+.del
+{
+  position:absolute;
+  top:0px;
+  right:15px;
+  width:30px;
+  height:30px;
+  text-align:center;
+  line-height:30px;
+  background-color:rgba(255,255,255,0.6);
+  cursor:pointer;
+}
+.imgAdd
+{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background-color:#4bd7ef;
+  color:#fff;
+  box-shadow:0px 0px 2px 1px rgba(0,0,0,0.2);
+  text-align:center;
+  line-height:30px;
+  margin-top:0px;
+  cursor:pointer;
+  font-size:15px;
+}
+/* Image Upload Ends */
+  </style>
