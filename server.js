@@ -95,7 +95,7 @@ app.use(
 app.use('/api', router);
 
 // Start the server.
-var port = 3000 || process.env.PORT;
+var port = process.env.PORT || 3000;
 http.createServer(app).listen(port);
 console.log('Server listening on port ' + port);
 console.log("PDF: http://localhost:"+port+"/api/pdf\nHTML: http://localhost:"+port+"/api/html")
