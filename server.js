@@ -31,6 +31,7 @@ router.route('/pdf').get(async function(req, res) {
             res.send(pdf);
         },
         { // PDF options
+            args: ['--no-sandbox'],
             preferCSSPageSize: true,
             printBackground: true,
             margin: { top: "1cm", bottom: "1cm", left: "1cm", right: "1cm" }
