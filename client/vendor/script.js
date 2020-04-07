@@ -244,7 +244,7 @@ function downloadPDF(){
     payload.education = education;
 
     (async () => {
-        const pdf = await fetch('http://localhost:3000/api/pdf', {
+        const pdf = await fetch('/api/pdf', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
