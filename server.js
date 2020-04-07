@@ -43,6 +43,38 @@ router.route('/pdf').get(async function(req, res) {
     });
 });
 
+router.route('/pdf').post(async function(req, res) {
+    // Expected 'templateName' and 'data' in req.body
+    console.log('req.body', req.body);
+    if(!(req.body.template && req.body.data)){
+        res.send({status:"error"});
+        return;
+    }
+    const source = fs.readFileSync('./templates/'+req.body.template+'.hbs', "utf8");
+    const data = req.body.data;
+
+
+    const template = Handlebars.compile(source);
+    const result = template(data);
+    convertHTMLToPDF(
+        result,
+        pdf => {
+            res.setHeader('Content-Type', 'application/pdf');
+            res.send(pdf);
+        },
+        { // PDF options
+            preferCSSPageSize: true,
+            printBackground: true,
+            margin: { top: "1cm", bottom: "1cm", left: "1cm", right: "1cm" }
+        },
+        null,
+        true
+    ).catch(err => {
+        console.log(err);
+        res.status(500).send(err);
+    });
+});
+
 // Test route
 router.route('/html').get(async function(req, res) {
     const source = fs.readFileSync('./templates/simple.hbs', "utf8");
@@ -55,7 +87,7 @@ router.route('/html').get(async function(req, res) {
 });
 
 app.use(
-    bodyParser.text({
+    bodyParser.json({
         limit: '50mb'
     })
 );

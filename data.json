@@ -12,6 +12,10 @@
         "Softwares":["Git","Docker","VS-Code"],
         "Languages":["Javascript","Python","C/C++"]
     },
+    "interests": [
+        "Music",
+        "Guitar"
+      ],
     "workExperience":[
        { 
            "designation":"Programmer Analyst",

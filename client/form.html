@@ -13,6 +13,8 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="http://fonts.googleapis.com/css?family=Denk+One:400" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
   <!-- Custom styles for this template -->
   <link href="css/heroic-features.css" rel="stylesheet">
@@ -79,20 +81,20 @@
       <div id="section1">    
         <h1>Personal Info</h1>
           <div class="row">
-            <div class="form-group col-sm-5">
+            <div class="form-group col-sm-6">
               <label for="name">Name</label>
               <input id="name" class="form-control" type="text" placeholder="Enter your Name">
             </div>    
-            <div class="form-group col-sm-5">
+            <div class="form-group col-sm-6">
               <label for="title">Title</label>
               <input id="title" class="form-control" type="text" placeholder="Enter your Title / Designation">
             </div>
-            <div class="form-group col-sm-5">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <div class="form-group col-sm-6">
+              <label for="emailId">Email address</label>
+              <input type="email" class="form-control" id="emailId" aria-describedby="emailHelp" placeholder="Enter email">
               <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
-            <div class="form-group col-sm-5">
+            <div class="form-group col-sm-6">
               <label for="mobile">Mobile</label>
               <input id="mobile" class="form-control" type="text" placeholder="Enter your Mobile Number">
               <small id="mobileHelp" class="form-text text-muted">We'll never share your mobile number with anyone else.</small>
@@ -108,17 +110,17 @@
               </div>
             </div>
 
-            <div class="form-group col-sm-5">
+            <div class="form-group col-sm-6">
               <label for="address1">Address Line 1</label>
               <input id="address1" class="form-control" type="text" placeholder="Enter your Address 1">
             </div>
-            <div class="form-group col-sm-5">
+            <div class="form-group col-sm-6">
               <label for="address2">Address Line 2</label>
               <input id="address2" class="form-control" type="text" placeholder="Enter your Address 2">
             </div>
-            <div class="form-group col-sm-5">
-              <label for="address2">City</label>
-              <input id="address2" class="form-control" type="text" placeholder="Enter your City">
+            <div class="form-group col-sm-6">
+              <label for="address3">City</label>
+              <input id="address3" class="form-control" type="text" placeholder="Enter your City">
             </div>
 
             <div class="form-group col-sm-12">
@@ -132,7 +134,8 @@
       <div id="section2"> 
         <h1>Skills</h1>
         <div id="skill-collection">
-          <div class="card form-group">
+          <div class="card form-group" id="skill0">
+            <button onclick="removeSkillSection(0)" type="button" class="btn btn-danger closeBtn">x</button>
             <div class="card-body">
               <div class="form-group col-sm-3">
                 <label for="skill-category0">Skill Category</label>
@@ -145,29 +148,107 @@
             </div>
           </div>
         </div>
-
-        <button onclick="addSkillSection()" type="button" class="btn btn-primary">Add More Skills</button>
-        
+        <button onclick="addSkillSection()" type="button" class="btn btn-primary">Add Skills</button>
       </div>        
       <div id="section3">         
         <h1>Work Experience</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        <div id="experience-collection">
+          <div class="card form-group" id="experience0">
+            <button onclick="removeExperienceSection(0)" type="button" class="btn btn-danger closeBtn">x</button>
+            <div class="card-body row">
+              <div class="form-group col-sm-6">
+                <label for="designatin0">Designation</label>
+                <input id="designatin0" class="form-control" type="text" placeholder="Enter the Designation">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="organization0">Organization</label>
+                <input id="organization0" class="form-control" type="text" placeholder="Enter the Organization">
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="experience-datepicker-from-0">From Date</label>
+                <input id="experience-datepicker-from-0" placeholder="Select Date" class="form-control" />
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="experience-datepicker-to-0">To Date</label>
+                <input id="experience-datepicker-to-0" placeholder="Select Date" class="form-control" />
+                <small id="experience-datepicker-to-0" class="form-text text-muted">Leave Empty if you are working here</small>
+              </div>
+
+              <div class="form-group col-sm-12">
+                <label for="description0">Job Description</label>
+                <textarea placeholder="Describe your Job briefly" class="form-control" id="description0" rows="3"></textarea>
+              </div>
+  
+              <div class="form-group col-sm-12">
+              <div class="input-group mb-3">
+                <input type="text" id="key-point0" class="form-control" placeholder="Add Key point">
+                <div class="input-group-append">
+                <button onclick="addKeyPoint('key-points0','key-point0', event)" class="btn btn-success">Add</button>
+                </div>
+              </div>
+              </div>
+              <ul id="key-points0">
+              </ul>
+
+            </div>
+          </div>
+        </div>
+        <button onclick="addExperienceSection()" type="button" class="btn btn-primary">Add Experience</button>
       </div>
       <div id="section4">         
         <h1>Education</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
-      </div>      
+        <div id="education-collection">
+          <div class="card form-group" id="education0">
+            <button onclick="removeEducationSection(0)" type="button" class="btn btn-danger closeBtn">x</button>
+            <div class="card-body row">
+              <div class="form-group col-sm-6">
+                <label for="education-course0">Course</label>
+                <input id="education-course0" class="form-control" type="text" placeholder="Enter the Education (eg: B.Tech Computer Science) ">
+              </div>
+              <div class="form-group col-sm-6">
+                <label for="education-college0">College</label>
+                <input id="education-college0" class="form-control" type="text" placeholder="Enter the name of College / Organization">
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="education-datepicker-from-0">From Date</label>
+                <input id="education-datepicker-from-0" placeholder="Select Date" class="form-control" />
+              </div>
+              <div class="form-group col-sm-3">
+                <label for="education-datepicker-to-0">To Date</label>
+                <input id="education-datepicker-to-0" placeholder="Select Date" class="form-control" />
+                <small id="education-datepicker-to-0" class="form-text text-muted">Leave Empty if you are working here</small>
+              </div>
+              <div class="form-group col-sm-12">
+                <label for="education-description0">Description</label>
+                <textarea placeholder="Describe your education briefly" class="form-control" id="education-description0" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button onclick="addEducationSection()" type="button" class="btn btn-primary">Add education</button>      </div>      
       <div id="section5">         
         <h1>Interests</h1>
-        <p>Try to scroll this section and look at the navigation list while scrolling!</p>
+        <div class="form-group col-sm-12">
+          <div class="input-group mb-3">
+            <input type="text" id="interests" class="form-control" placeholder="Add your Interests">
+            <div class="input-group-append">
+            <button onclick="addInterest()" class="btn btn-success">Add</button>
+            </div>
+          </div>
+          </div>
+          <ul id="interest-points">
+          </ul>      
       </div>
     </form>
-
+    <!-- Add icon library -->
+    <button style="margin: 10px auto;display: block;" onclick="downloadPDF()" class="btn btn-success">
+      <span id="loader" style="display: none;" class="spinner-border spinner-border-sm"></span>
+      <i class="fa fa-download"></i> 
+      Download
+    </button>
     </div>
   </div>
 </div>
-
-
 
   <!-- Footer -->
   <footer class="py-5 bg-dark">
@@ -180,6 +261,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
   <script src="vendor/tagsinput/tagsinput.js"></script>
   <script src="vendor/script.js"></script>
 
@@ -223,7 +306,14 @@
     margin: 5px;
     padding: 0 3px 3px 3px;
   }
-
+  .closeBtnLi{
+    padding: 0px 3px;
+    font-size: 10px;
+    margin-left: 10px;
+  }
+.datepicker{
+  background: rgb(29, 29, 29);
+}
 
 
   /* Image Upload styles */
