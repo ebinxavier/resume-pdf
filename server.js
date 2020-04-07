@@ -35,9 +35,10 @@ router.route('/pdf').get(async function(req, res) {
             printBackground: true,
             margin: { top: "1cm", bottom: "1cm", left: "1cm", right: "1cm" }
         },
-        {
-            args: ['--no-sandbox'],
-        },//Pupeteer options
+        { //Pupeteer options
+            headless: true, 
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        },
         true
     ).catch(err => {
         console.log(err);
